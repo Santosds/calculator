@@ -32,3 +32,7 @@ $('#clear').click(function (){
   memory = 0;
   $('#screen').val("0");
 });
+$('#sign').click(function (){
+  $('#screen').val($('#screen').val() * -1);
+});
+  
