@@ -35,4 +35,20 @@ $('#clear').click(function (){
 $('#sign').click(function (){
   $('#screen').val($('#screen').val() * -1);
 });
-  
+$('#backspace').click(function(){
+  var len = $('#screen').val().length;
+$('#screen').val($('#screen').val().substring(0, len -1));
+  if($('#screen').val().length == 0)
+    $('#screen').val(0);
+});
+var result = function(){
+  if(memory == 0)
+    return;
+  c = true;
+  var r;
+  switch(memorycalc){
+    case '+':
+      r = memory + $('#screen').val();
+    breack;
+    case '-':
+      r = memory - $('screen').val();
